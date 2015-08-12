@@ -27,15 +27,23 @@
 //===============================================================================================//
 #ifndef _REFLECTIVEDLLINJECTION_LOADLIBRARYR_H
 #define _REFLECTIVEDLLINJECTION_LOADLIBRARYR_H
+
+#ifdef _REFLECTIVEDLLINJECTION_EXPORTS
+#define _REFLECTIVEDLLINJECTION_API __declspec(dllexport)
+#else
+#define _REFLECTIVEDLLINJECTION_API __declspec(dllimport)
+#endif
 //===============================================================================================//
 #include "ReflectiveDLLInjection.h"
 
-DWORD GetReflectiveLoaderOffset( VOID * lpReflectiveDllBuffer );
+_REFLECTIVEDLLINJECTION_API DWORD
+GetReflectiveLoaderOffset(VOID * lpReflectiveDllBuffer);
 
-HMODULE WINAPI LoadLibraryR( LPVOID lpBuffer, DWORD dwLength );
+_REFLECTIVEDLLINJECTION_API HMODULE
+LoadLibraryR(LPVOID lpBuffer, DWORD dwLength);
 
-HANDLE WINAPI LoadRemoteLibraryR( HANDLE hProcess, LPVOID lpBuffer, DWORD dwLength, LPVOID lpParameter );
-
+_REFLECTIVEDLLINJECTION_API HANDLE
+LoadRemoteLibraryR(HANDLE hProcess, LPVOID lpBuffer, DWORD dwLength, LPVOID lpParameter);
 //===============================================================================================//
 #endif
 //===============================================================================================//

@@ -27,6 +27,7 @@
 //===============================================================================================//
 #ifndef _REFLECTIVEDLLINJECTION_REFLECTIVEDLLINJECTION_H
 #define _REFLECTIVEDLLINJECTION_REFLECTIVEDLLINJECTION_H
+
 //===============================================================================================//
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>

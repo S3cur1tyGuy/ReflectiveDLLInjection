@@ -27,10 +27,18 @@
 //===============================================================================================//
 #ifndef _REFLECTIVEDLLINJECTION_GETPROCADDRESSR_H
 #define _REFLECTIVEDLLINJECTION_GETPROCADDRESSR_H
+
+#ifdef _REFLECTIVEDLLINJECTION_EXPORTS
+#define _REFLECTIVEDLLINJECTION_API __declspec(dllexport)
+#else
+#define _REFLECTIVEDLLINJECTION_API __declspec(dllimport)
+#endif
+
 //===============================================================================================//
 #include "ReflectiveDLLInjection.h"
 
-FARPROC WINAPI GetProcAddressR( HANDLE hModule, LPCSTR lpProcName );
+_REFLECTIVEDLLINJECTION_API FARPROC GetProcAddressR( HANDLE hModule, LPCSTR lpProcName );
+//===============================================================================================//
+
 //===============================================================================================//
 #endif
-//===============================================================================================//
