@@ -39,6 +39,9 @@
 _REFLECTIVEDLLINJECTION_API DWORD
 GetReflectiveLoaderOffset(VOID * lpReflectiveDllBuffer);
 
+_REFLECTIVEDLLINJECTION_API DWORD
+GetReflectiveLoaderOffset(VOID * lpReflectiveDllBuffer, LPSTR lpExportName);
+
 _REFLECTIVEDLLINJECTION_API HMODULE
 LoadLibraryR(LPVOID lpBuffer, DWORD dwLength);
 
